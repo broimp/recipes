@@ -35,6 +35,16 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rspec-rails'          # adds rspec test to rails
+  gem 'guard-bundler'        # when we add gems it auto reruns bundler
+  gem 'guard-rspec'          # when changing files it reruns corresponding tests
+  gem 'guard-migrate'        # notices when you change migrations, reruns them
+  gem 'factory_girl_rails'   # creates realistic test data
+  gem 'capybara'             # operates browser screens in test environment
+  gem 'shoulda-matchers'     # access to rspec test methods for writing tests
+  gem 'quiet_assets'         # rails server leaves off cascading asset calls from echo
+  gem 'faker'                # works with factory girl to generate data
+  gem 'launchy'              # pop screens from test environment
 end
 
 group :development do
