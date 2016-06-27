@@ -1,0 +1,27 @@
+.recipes {
+  background: asset_url('Chefs.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+div.transbox {
+  margin-top: 10%;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-bottom: 10%;
+  padding-top: 30px;
+  padding-right: 1cm;
+  padding-left: 1cm;
+  font-size: 12px;
+  font-weight: 200;
+  background-color: #ccffff;
+  border: 1px solid black;
+  opacity: 0.96;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+
+  }

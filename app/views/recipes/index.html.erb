@@ -1,0 +1,26 @@
+<div class="page-header">
+  <%= link_to edit_recipe_path(@recipe), class: 'btn btn-primary' do %>
+    Recipe Selection
+  <% end %>
+  <h4><%= "PAGE: #{@page}, DISH: #{@dish}, INGREDIENTS: #{@ingredients.gsub(',', ' ')}" %></h4>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+
+
+    <tbody>
+    <% @recipes.each do |row| %>
+      <% if row["title"] %>
+        <% @recipepuppy_id = row["href"] %>
+        <% @show_link = @recipepuppy_id %>
+        <tr>
+          <td> <%= image_tag(row["thumbnail"], class: 'center-block', height: '65', onerror: 'this.style.display = "none"') %></td>
+          <td><%= link_to row["title"].html_safe, @show_link %></td>
+          <td><%= row["ingredients"].html_safe %></td>
+        </tr>
+      <% end %>
+    <% end %>
+    </tbody>
+  </table>
+</div>
